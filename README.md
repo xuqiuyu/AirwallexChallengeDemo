@@ -1,14 +1,17 @@
 # Airwall Challenge Demo
 
 ## Related technology stack
-`React`  `React-Router` ` Redux`  `Redux-Saga`  `Sass`  `Webpack` ` Koa2 `
+`React`  `React-Router` ` Redux` `Redux-form` `Immutalbe`  `Redux-Saga`  `Sass`  `Webpack` ` Koa2 `
 
 ## Install dependencies
 1、for DEV mode `npm install`
 
 2、for PRODUCTION mode `npm install --production`
 
-
+## Unite testing
+```
+npm run test
+```
 
 ## How to run
 1. for DEV mode

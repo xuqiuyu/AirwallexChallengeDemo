@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --progress --config ./webpack/webpack.prd.js",
     "dev": "webpack-dev-server --config ./webpack/webpack.dev.js --inline --hot",
     "start": "node ./server/server.js"
@@ -20,6 +20,16 @@
     "url": "https://github.com/xuqiuyu/AirwallexChallengeDemo/issues"
   },
   "homepage": "https://github.com/xuqiuyu/AirwallexChallengeDemo#readme",
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "scss"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -58,9 +68,14 @@
     "webpack-merge": "^4.1.2"
   },
   "devDependencies": {
+    "babel-jest": "^23.0.1",
     "clean-webpack-plugin": "^0.1.19",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-funsee": "0.0.3",
+    "jest": "^23.1.0",
+    "react-test-renderer": "^16.2.0",
     "webpack-dev-server": "^2.11.1"
   }
 }
