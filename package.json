@@ -1,0 +1,66 @@
+{
+  "name": "AirwallexChallengeDemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --config ./webpack/webpack.prd.js",
+    "dev": "webpack-dev-server --config ./webpack/webpack.dev.js --inline --hot",
+    "start": "node ./server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuqiuyu/AirwallexChallengeDemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuqiuyu/AirwallexChallengeDemo/issues"
+  },
+  "homepage": "https://github.com/xuqiuyu/AirwallexChallengeDemo#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-harddisk-plugin": "^0.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "immutable": "^3.8.2",
+    "isomorphic-fetch": "^2.2.1",
+    "koa": "^2.5.1",
+    "koa-static": "^4.0.3",
+    "koa-views": "^6.1.4",
+    "loader-utils": "^1.1.0",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "react-router-config": "^1.0.0-beta.4",
+    "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0",
+    "redux-form": "^7.3.0",
+    "redux-saga": "^0.16.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^3.8.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "eslint": "^4.19.1",
+    "eslint-config-funsee": "0.0.3",
+    "webpack-dev-server": "^2.11.1"
+  }
+}

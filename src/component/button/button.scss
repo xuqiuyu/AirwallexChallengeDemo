@@ -1,0 +1,12 @@
+.button {
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #000;
+    padding: 12px 40px;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        border-color: #999;
+    }
+}
