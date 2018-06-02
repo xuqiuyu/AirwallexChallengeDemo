@@ -49,7 +49,7 @@ class Home extends C {
       <div className={style.home}>
         <section>A better way</section>
         <section>to enjoy every day.</section>
-        <p>Be the first to know when we lanch.</p>
+        <p>Be the first to know when we launch.</p>
         <Button
           text='Request an invite'
           onClick={this.handleClick}
