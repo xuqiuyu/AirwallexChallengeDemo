@@ -2,6 +2,8 @@
 
 ## Related technology stack
 `React`  `React-Router` ` Redux` `Redux-form` `Immutalbe`  `Redux-Saga`  `Sass`  `Webpack` ` Koa2 `
+## Node Enviroment
+`V8.4.0` is recommended
 
 ## Install dependencies
 1、for DEV mode `npm install`
