@@ -8,15 +8,14 @@
 
 2、for PRODUCTION mode `npm install --production`
 
-## Unite testing
-```
-npm run test
-```
-
 ## How to run
 1. for DEV mode
 ```
 npm run dev
+```
+## Unite testing
+```
+npm run test
 ```
 2. for PRODUCTION mode
 ```
