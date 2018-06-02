@@ -5,7 +5,8 @@
 
 ## Install dependencies
 1、for DEV mode `npm install`
-1、for PRODUCTION mode `npm install --production`
+
+2、for PRODUCTION mode `npm install --production`
 
 
 
