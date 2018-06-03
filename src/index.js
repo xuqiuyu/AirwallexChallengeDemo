@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore, compose } from 'redux';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import createSagaMiddleware from 'redux-saga';
 import reducer from '../src/redux/reducer';
@@ -26,11 +26,11 @@ sagaMiddleware.run(saga);
 
 ReactDom.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       {
         renderRoutes(routes)
       }
-    </BrowserRouter>
+    </HashRouter>
   </Provider>
   ,
   document.getElementById('root')
