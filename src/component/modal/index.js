@@ -5,8 +5,8 @@ import * as style from './modal.scss';
 const Modal = ({ visiability, children, onMaskClick }) => (
   <div className={visiability ? style.modal : style.modalHidden} onClick={onMaskClick} key='modalMask'>
     {
-        children
-      }
+      children
+    }
   </div>
 );
 

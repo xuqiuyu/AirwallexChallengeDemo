@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
       title='BROCCOLI & CO'
     />
     {
-                children
+      children
     }
     <Footer
       content='Made with ♥ in Melbourne.'

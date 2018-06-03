@@ -1,106 +1,103 @@
 .inviteForm {
-    background: #fff;
+  background: #fff;
 
-    > div {
-        margin: 20px 0;
-        width: 300px;
-        text-align: center;
+  > div {
+      margin: 20px 0;
+      width: 300px;
+      text-align: center;
 
-        > div > div {
-            text-align: left;
-            > input {
-                width: 100%;
-                height: 30px;
-                text-indent: 8px;
-                border: 1px solid #ccc;
+      > div > div {
+          text-align: left;
+          > input {
+              width: 100%;
+              height: 30px;
+              text-indent: 8px;
+              border: 1px solid #ccc;
             }
 
-            > span {
-                color: red;
-                font-size: 12px;
+          > span {
+              color: red;
+              font-size: 12px;
             }
         }
-
     }
 
-    > p {
-        font-size: 14px;
-        text-align: center;
+  > p {
+      font-size: 14px;
+      text-align: center;
     }
-
 }
 
 .title {
-    font-family: -webkit-pictograph;
-    font-style: italic;
+  font-family: -webkit-pictograph;
+  font-style: italic;
 
-    > div {
-        margin: 12px 0;
+  > div {
+      margin: 12px 0;
     }
 
-    > hr {
-        width: 30px;
-        height: 1px;
-        background: #000;
-        margin-bottom: 30px;
+  > hr {
+      width: 30px;
+      height: 1px;
+      background: #000;
+      margin-bottom: 30px;
     }
 }
 
 .submitButton {
-    width: 100%;
-    font-size: 16px;
-    border: 1px solid #999;
-    padding: 10px 0px;
-    margin: 20px 0;
-    cursor: pointer;
-    transition: all .3s;
-    color: #999;
-    outline: none;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #999;
+  padding: 10px 0px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: all .3s;
+  color: #999;
+  outline: none;
 
-    &:hover {
-        border-color: #ccc;
-    }
+  &:hover {
+      border-color: #ccc;
+  }
 }
 
 .submitButtonLoading {
-    @extend .submitButton;
-    border-color: #ccc;
-    color:#ccc;
-    cursor: default;
+  @extend .submitButton;
+  border-color: #ccc;
+  color:#ccc;
+  cursor: default;
 }
 
 .errorMsg {
-    color: red;
-    font-style: italic;
-    height: 20px !important;
+  color: red;
+  font-style: italic;
+  height: 20px !important;
 }
 
 //loadin animation
 .spinner {
-    text-align: center;
+  text-align: center;
 
-    > div {
-        width: 16px;
-        height: 16px;
-        background-color: #999;
-       
-        border-radius: 100%;
-        display: inline-block;
-        -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
-        animation: bouncedelay 1.4s infinite ease-in-out;
-        /* Prevent first frame from flickering when animation starts */
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
+  > div {
+      width: 16px;
+      height: 16px;
+      background-color: #999;
+      border-radius: 100%;
+      display: inline-block;
+      -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+      animation: bouncedelay 1.4s infinite ease-in-out;
+      /* Prevent first frame from flickering when animation starts */
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
     }
 
-    > div:first-child {
-        -webkit-animation-delay: -0.32s;
-        animation-delay: -0.32s;
+  > div:first-child {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
     }
 
-    > div:nth-child(2) {
-        -webkit-animation-delay: -0.16s;
-        animation-delay: -0.16s;
+  > div:nth-child(2) {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
     }
   }
 
