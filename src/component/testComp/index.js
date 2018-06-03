@@ -1,15 +1,11 @@
 import React from 'react';
 import { string, func } from 'prop-types';
 
-const TestComp = (props) => {
-  const { text, onClick } = props;
-
-  return (
-    <button onClick={onClick}>
-      {text}
-    </button>
-  );
-};
+const TestComp = ({ text, onClick }) => (
+  <button onClick={onClick}>
+    {text}
+  </button>
+);
 
 TestComp.propTypes = {
   text: string,

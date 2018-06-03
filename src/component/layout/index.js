@@ -5,23 +5,20 @@ import Footer from '../footer';
 import * as style from './layout.scss';
 import './reset.scss';
 
-const Layout = (props) => {
-  const { children } = props;
-  return (
-    <div className={style.layout}>
-      <Header
-        title='BROCCOLI & CO'
-      />
-      {
+const Layout = ({ children }) => (
+  <div className={style.layout}>
+    <Header
+      title='BROCCOLI & CO'
+    />
+    {
                 children
     }
-      <Footer
-        content='Made with ♥ in Melbourne.'
-        description='@ 2016 Broccoli & Co. All rights reserved.'
-      />
-    </div>
-  );
-};
+    <Footer
+      content='Made with ♥ in Melbourne.'
+      description='@ 2016 Broccoli & Co. All rights reserved.'
+    />
+  </div>
+);
 
 Layout.propTypes = {
   children: object.isRequired

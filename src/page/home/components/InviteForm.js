@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { func, bool, string, object } from 'prop-types';
 import * as style from './inviteForm.scss';
 
 const validate = (values) => {
@@ -35,29 +36,27 @@ const renderField = ({
   </div>
 );
 
-const InviteForm = (props) => {
-  const {
-    handleSubmit, loading, inviteSuccess, inviteError, onOk
-  } = props;
-  return (
-    !inviteSuccess ?
-      <form onSubmit={handleSubmit}>
-        <div className={style.inviteForm}>
-          <div className={style.title}>
-            <div>Request an invite</div>
-            <hr />
-          </div>
-          <div>
-            <Field name='name' component={renderField} type='text' placeholder='Full name' />
-          </div>
-          <div>
-            <Field name='email' component={renderField} type='text' placeholder='Email' />
-          </div>
-          <div>
-            <Field name='confirmEmail' component={renderField} type='text' placeholder='Confirm email' />
-          </div>
-          <button type='submit' className={style.submitButton} disabled={loading}>
-            {
+const InviteForm = ({
+  handleSubmit, loading, inviteSuccess, inviteError, onOk
+}) => (
+  !inviteSuccess ?
+    <form onSubmit={handleSubmit}>
+      <div className={style.inviteForm}>
+        <div className={style.title}>
+          <div>Request an invite</div>
+          <hr />
+        </div>
+        <div>
+          <Field name='name' component={renderField} type='text' placeholder='Full name' />
+        </div>
+        <div>
+          <Field name='email' component={renderField} type='text' placeholder='Email' />
+        </div>
+        <div>
+          <Field name='confirmEmail' component={renderField} type='text' placeholder='Confirm email' />
+        </div>
+        <button type='submit' className={style.submitButton} disabled={loading}>
+          {
           !loading ? 'Send'
            :
           <div>
@@ -71,27 +70,59 @@ const InviteForm = (props) => {
 
 
         }
-          </button>
-          {
+        </button>
+        {
             inviteError ?
               <div className={style.errorMsg}>{inviteError}</div>
             : ''
           }
-        </div>
-      </form>
-      :
-      <div className={style.inviteForm}>
-        <div className={style.title}>
-          <div>All done!</div>
-          <hr />
-        </div>
-        <p>You will be one of the first to experience </p>
-        <p>Broccoli & Co. when we launch.</p>
-        <button className={style.submitButton} onClick={onOk}>OK</button>
       </div>
+    </form>
+    :
+    <div className={style.inviteForm}>
+      <div className={style.title}>
+        <div>All done!</div>
+        <hr />
+      </div>
+      <p>You will be one of the first to experience </p>
+      <p>Broccoli & Co. when we launch.</p>
+      <button className={style.submitButton} onClick={onOk}>OK</button>
+    </div>
 
-  );
+);
+
+
+InviteForm.propTypes = {
+  handleSubmit: func,
+  loading: bool,
+  inviteSuccess: bool,
+  inviteError: string,
+  onOk: func
 };
+
+InviteForm.defaultProps = {
+  handleSubmit: () => {},
+  loading: false,
+  inviteSuccess: false,
+  inviteError: '',
+  onOk: () => {}
+};
+
+
+renderField.propTypes = {
+  input: string,
+  placeholder: string,
+  type: string,
+  meta: object
+};
+
+renderField.defaultProps = {
+  input: '',
+  placeholder: '',
+  type: '',
+  meta: {}
+};
+
 
 export default reduxForm({
   form: 'homeRequest',

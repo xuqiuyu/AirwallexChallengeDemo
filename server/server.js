@@ -9,13 +9,6 @@ const Koa = require('koa');
 
 const app = new Koa();
 
-// apply koa middlewares
-// app.use(async (ctx) => {
-//   ctx.body = 'hello koa2';
-// });
-
-
-// app.use(views(path.resolve(__dirname, '../view/template'), { map: { html: 'ejs' } }));
 app.use(serve(path.resolve(__dirname, '../dist')));
 
 app.listen(8080);

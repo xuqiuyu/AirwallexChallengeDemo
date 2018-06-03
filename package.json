@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "eslint": "./node_modules/.bin/eslint . --ext .js",
     "build": "webpack --progress --config ./webpack/webpack.prd.js",
     "dev": "webpack-dev-server --config ./webpack/webpack.dev.js --inline --hot",
     "start": "node ./server/server.js"
@@ -49,7 +50,6 @@
     "koa": "^2.5.1",
     "koa-static": "^4.0.3",
     "koa-views": "^6.1.4",
-    "loader-utils": "^1.1.0",
     "node-sass": "^4.9.0",
     "postcss-loader": "^2.1.5",
     "prop-types": "^15.6.1",

@@ -2,6 +2,7 @@ import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
+// time is limited , so just give one test case
 import TestComp from '../src/component/testComp';
 
 configure({ adapter: new Adapter() });

@@ -10,6 +10,13 @@
 
 2、for PRODUCTION mode `npm install --production`
 
+
+## ESLint code review
+```
+npm run eslint
+```
+
+
 ## How to run
 1. for DEV mode
 ```

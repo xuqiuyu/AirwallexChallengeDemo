@@ -1,9 +1,9 @@
 import React, { Component as C } from 'react';
 import { connect } from 'react-redux';
 import { Button, Modal } from '../../component';
-import InviteForm from './inviteForm';
+import InviteForm from './components/InviteForm';
 import * as style from './home.scss';
-import { showModal, hideModal, toggleLoading, inviteRequest, hideSuccessMsg, clearInviteError } from '../../../redux/action';
+import { showModal, hideModal, toggleLoading, inviteRequest, hideSuccessMsg, clearInviteError } from '../../redux/action';
 
 class Home extends C {
   constructor() {

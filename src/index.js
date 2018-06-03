@@ -5,8 +5,8 @@ import { applyMiddleware, createStore, compose } from 'redux';
 import { BrowserRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import createSagaMiddleware from 'redux-saga';
-import reducer from '../redux/reducer';
-import saga from '../redux/saga';
+import reducer from '../src/redux/reducer';
+import saga from '../src/redux/saga';
 import routes from './routes';
 
 
