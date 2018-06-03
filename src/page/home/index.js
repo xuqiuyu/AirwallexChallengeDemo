@@ -59,22 +59,22 @@ class Home extends C {
         <Modal
           visiability={modalVisiability}
           onMaskClick={this.handleMaskClick}
-        >
-          <div className={style.inviteForm} onClick={(e) => { e.stopPropagation(); }}>
-            {
-            !inviteSuccess ?
-              <InviteForm
-                onSubmit={this.handleSubmit}
-                loading={loading}
-                inviteError={inviteError}
-              /> :
-              <InviteSuccess
-                onOk={this.handleOk}
-              />
-          }
-
-
-          </div>
+        >{
+          modalVisiability ?
+            <div className={style.inviteForm} onClick={(e) => { e.stopPropagation(); }}>
+              {
+          !inviteSuccess ?
+            <InviteForm
+              onSubmit={this.handleSubmit}
+              loading={loading}
+              inviteError={inviteError}
+            /> :
+            <InviteSuccess
+              onOk={this.handleOk}
+            />
+        }
+            </div> : <div />
+        }
         </Modal>
       </div>
     );
