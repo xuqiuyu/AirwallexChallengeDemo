@@ -37,26 +37,25 @@ const renderField = ({
 );
 
 const InviteForm = ({
-  handleSubmit, loading, inviteSuccess, inviteError, onOk
+  handleSubmit, loading, inviteError
 }) => (
-  !inviteSuccess ?
-    <form onSubmit={handleSubmit}>
-      <div className={style.inviteForm}>
-        <div className={style.title}>
-          <div>Request an invite</div>
-          <hr />
-        </div>
-        <div>
-          <Field name='name' component={renderField} type='text' placeholder='Full name' />
-        </div>
-        <div>
-          <Field name='email' component={renderField} type='text' placeholder='Email' />
-        </div>
-        <div>
-          <Field name='confirmEmail' component={renderField} type='text' placeholder='Confirm email' />
-        </div>
-        <button type='submit' className={style.submitButton} disabled={loading}>
-          {
+  <form onSubmit={handleSubmit}>
+    <div className={style.inviteForm}>
+      <div className={style.title}>
+        <div>Request an invite</div>
+        <hr />
+      </div>
+      <div>
+        <Field name='name' component={renderField} type='text' placeholder='Full name' />
+      </div>
+      <div>
+        <Field name='email' component={renderField} type='text' placeholder='Email' />
+      </div>
+      <div>
+        <Field name='confirmEmail' component={renderField} type='text' placeholder='Confirm email' />
+      </div>
+      <button type='submit' className={style.submitButton} disabled={loading}>
+        {
           !loading ? 'Send'
            :
           <div>
@@ -67,27 +66,15 @@ const InviteForm = ({
             </div>
             <div>Sending, please wait ... </div>
           </div>
-
-
         }
-        </button>
-        {
-            inviteError ?
-              <div className={style.errorMsg}>{inviteError}</div>
-            : ''
-          }
-      </div>
-    </form>
-    :
-    <div className={style.inviteForm}>
-      <div className={style.title}>
-        <div>All done!</div>
-        <hr />
-      </div>
-      <p>You will be one of the first to experience </p>
-      <p>Broccoli & Co. when we launch.</p>
-      <button className={style.submitButton} onClick={onOk}>OK</button>
+      </button>
+      {
+        inviteError ?
+          <div className={style.errorMsg}>{inviteError}</div>
+        : ''
+      }
     </div>
+  </form>
 
 );
 
@@ -95,29 +82,25 @@ const InviteForm = ({
 InviteForm.propTypes = {
   handleSubmit: func,
   loading: bool,
-  inviteSuccess: bool,
-  inviteError: string,
-  onOk: func
+  inviteError: string
 };
 
 InviteForm.defaultProps = {
   handleSubmit: () => {},
   loading: false,
-  inviteSuccess: false,
-  inviteError: '',
-  onOk: () => {}
+  inviteError: ''
 };
 
 
 renderField.propTypes = {
-  input: string,
+  input: object,
   placeholder: string,
   type: string,
   meta: object
 };
 
 renderField.defaultProps = {
-  input: '',
+  input: {},
   placeholder: '',
   type: '',
   meta: {}

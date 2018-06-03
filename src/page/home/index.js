@@ -2,8 +2,10 @@ import React, { Component as C } from 'react';
 import { connect } from 'react-redux';
 import { Button, Modal } from '../../component';
 import InviteForm from './components/InviteForm';
+import InviteSuccess from './components/InviteSuccess';
 import * as style from './home.scss';
-import { showModal, hideModal, toggleLoading, inviteRequest, hideSuccessMsg, clearInviteError } from '../../redux/action';
+import { showModal, hideModal, toggleLoading } from '../../redux/action';
+import { inviteRequest, hideSuccessMsg, clearInviteError } from './moduleRedux/action';
 
 class Home extends C {
   constructor() {
@@ -59,13 +61,19 @@ class Home extends C {
           onMaskClick={this.handleMaskClick}
         >
           <div className={style.inviteForm} onClick={(e) => { e.stopPropagation(); }}>
-            <InviteForm
-              onSubmit={this.handleSubmit}
-              loading={loading}
-              inviteSuccess={inviteSuccess}
-              inviteError={inviteError}
-              onOk={this.handleOk}
-            />
+            {
+            !inviteSuccess ?
+              <InviteForm
+                onSubmit={this.handleSubmit}
+                loading={loading}
+                inviteError={inviteError}
+              /> :
+              <InviteSuccess
+                onOk={this.handleOk}
+              />
+          }
+
+
           </div>
         </Modal>
       </div>
@@ -77,7 +85,11 @@ export default connect(
   (state) => {
     const {
       common: {
-        modalVisiability, loading, inviteSuccess, inviteError
+        modalVisiability, loading
+      },
+      homePage: {
+        inviteSuccess,
+        inviteError
       }
     } = state;
     return ({
