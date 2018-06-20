@@ -1,8 +1,8 @@
-import Header from './header';
-import Footer from './footer';
-import Modal from './modal';
-import Layout from './layout';
-import Button from './button';
+import Header from './header/index.tsx';
+import Footer from './footer/index.tsx';
+import Modal from './modal/index.tsx';
+import Layout from './layout/index.tsx';
+import Button from './button/index.tsx';
 
 export default {
   Header,

@@ -8,7 +8,7 @@ const path = require('path');
 const webpackBase = require('./webpack.base');
 
 module.exports = merge(webpackBase, {
-  devtool: 'source-map',
+  mode: 'production',
   entry: './src',
   output: {
     filename: '[name].[chunkhash].js',
